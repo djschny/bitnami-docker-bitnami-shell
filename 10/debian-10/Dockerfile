@@ -11,3 +11,6 @@ ENV BITNAMI_APP_NAME="bitnami-shell" \
     OS_FLAVOUR="debian-10" \
     OS_NAME="linux"
 
+RUN echo "nobody:x:1000:1000:nobody:/:/bin/sh" >> /etc/passwd
+RUN echo "nobody:x:1000:" >> /etc/group
+USER 1000
